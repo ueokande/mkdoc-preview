@@ -14,6 +14,11 @@ jobs:
       - run: git config user.name "Shin'ya Ueoka"
       - run: git config user.email "ueokande@i-beam.org"
 
+
+
+      - add_ssh_keys:
+        fingerprints:
+          - "e9:c4:2f:89:11:f7:7c:d2:06:be:f3:1b:9f:85:b1:d5"
       - run: cd build
       - run: git checkout gh-pages
       - run: git add .
