@@ -9,12 +9,12 @@ jobs:
       - run: mkdocs build
       - checkout:
           path: build
-      - mv site build/${CIRCLE_BRANCH}
-      - git config user.name "Shin'ya Ueoka"
-      - git config user.email "ueokande@i-beam.org"
+      - run: mv site build/${CIRCLE_BRANCH}
+      - run: git config user.name "Shin'ya Ueoka"
+      - run: git config user.email "ueokande@i-beam.org"
 
-      - cd build
-      - git checkout gh-pages
-      - git add . 
-      - git commit -m'Update github pages'
-      - git push origin gh-pages
+      - run: cd build
+      - run: git checkout gh-pages
+      - run: git add .
+      - run: git commit -m'Update github pages'
+      - run: git push origin gh-pages
