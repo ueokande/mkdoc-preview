@@ -14,15 +14,19 @@ jobs:
 
       - checkout:
           path: /tmp/build
-      - run: ( cd /tmp/build; git checkout gh-pages )
+
+      - run: |
+          cd /tmp/build
+          git checkout gh-pages
       - run: rm -rf /tmp/build/$CIRCLE_BRANCH
       - run: mv site /tmp/build/$CIRCLE_BRANCH
-
-      - run: cd /tmp/build
-      - run: git add .
-      - run: git commit -m'Update github pages'
 
       - add_ssh_keys:
           fingerprints:
             - "e9:c4:2f:89:11:f7:7c:d2:06:be:f3:1b:9f:85:b1:d5"
-      - run: git push origin gh-pages
+
+      - run: |
+          cd /tmp/build
+          git add .
+          git commit -m'Update github pages'
+          git push origin gh-pages
