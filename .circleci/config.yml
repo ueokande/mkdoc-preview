@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: pip install --user mkdocs
-      - run: mkdocs build
+      - run: ~/.local/bin/mkdocs build
       - checkout:
           path: build
       - run: mv site build/${CIRCLE_BRANCH}
