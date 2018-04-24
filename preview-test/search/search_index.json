@@ -1,0 +1,19 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Hello preview\n\n\n\u3053\u308c\u306f\u3066\u3059\u3068",
+            "title": "Home"
+        },
+        {
+            "location": "/#hello-preview",
+            "text": "",
+            "title": "Hello preview"
+        },
+        {
+            "location": "/#_1",
+            "text": "",
+            "title": "\u3053\u308c\u306f\u3066\u3059\u3068"
+        }
+    ]
+}
