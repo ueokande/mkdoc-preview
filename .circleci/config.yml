@@ -1,5 +1,5 @@
 
-version: 3
+version: 2
 jobs:
   build:
     docker:
@@ -13,12 +13,12 @@ jobs:
       - run: ~/.local/bin/mkdocs build
 
       - checkout:
-          path: build
-      - run: ( cd build && git checkout gh-pages )
+          path: /tmp/build
+      - run: ( cd /tmp/build; git checkout gh-pages )
+      - run: rm -rf /tmp/build/$CIRCLE_BRANCH
+      - run: mv site /tmp/build/$CIRCLE_BRANCH
 
-      - run: rm -rf build/$CIRCLE_BRANCH
-      - run: mv site build/$CIRCLE_BRANCH
-      - run: cd build
+      - run: cd /tmp/build
       - run: git add .
       - run: git commit -m'Update github pages'
 
