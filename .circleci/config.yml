@@ -6,8 +6,6 @@ jobs:
       - image: circleci/python:3.5-jessie
     steps:
       - checkout
-      - run: git config user.name "Shin'ya Ueoka"
-      - run: git config user.email "ueokande@i-beam.org"
 
       - run: pip install --user mkdocs
       - run: ~/.local/bin/mkdocs build
@@ -27,6 +25,8 @@ jobs:
 
       - run: |
           cd /tmp/build
+          git config user.name "Shin'ya Ueoka"
+          git config user.email "ueokande@i-beam.org"
           git add .
           git commit -m'Update github pages'
           git push origin gh-pages
