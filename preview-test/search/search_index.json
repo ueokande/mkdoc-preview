@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Hello preview\n\n\n\u3053\u308c\u306f\u3066\u3059\u3068",
+            "text": "Hello preview\n\n\n\u3053\u308c\u306f\u4fee\u6b63\u6e08\u307f",
             "title": "Home"
         },
         {
@@ -13,7 +13,7 @@
         {
             "location": "/#_1",
             "text": "",
-            "title": "\u3053\u308c\u306f\u3066\u3059\u3068"
+            "title": "\u3053\u308c\u306f\u4fee\u6b63\u6e08\u307f"
         }
     ]
 }
