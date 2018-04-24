@@ -6,7 +6,7 @@ jobs:
       - image: circleci/python:3.5-jessie
     steps:
       - checkout
-      - run: pip install mkdocs
+      - run: pip install --user mkdocs
       - run: mkdocs build
       - checkout:
           path: build
