@@ -1,0 +1,20 @@
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.5-jessie
+    steps:
+      - checkout
+      - run: mkdocs build
+      - checkout:
+          path: build
+      - mv site build/${CIRCLE_BRANCH}
+      - git config user.name "Shin'ya Ueoka"
+      - git config user.email "ueokande@i-beam.org"
+
+      - cd build
+      - git checkout gh-pages
+      - git add . 
+      - git commit -m'Update github pages'
+      - git push origin gh-pages
