@@ -1,0 +1,6 @@
+site_name: 'Neco project Wiki'
+site_url: https://ueokande.github.io/mkdoc-preview
+repo_url: https://github.com/ueokande/mkdoc-preview
+repo_name: Neco/wiki
+pages:
+  - Home: index.md
